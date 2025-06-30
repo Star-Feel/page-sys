@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>互动抽奖系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="title">🎉 互动抽奖系统 🎉</h1>
+            <div class="round-indicator">
+                <span>第 <span id="currentRound">1</span> 轮抽奖</span>
+            </div>
+        </header>
+
+        <main>
+            <div class="lottery-section">
+                <div class="name-display">
+                    <div id="displayName" class="display-name">点击开始抽奖</div>
+                </div>
+                
+                <div class="controls">
+                    <button id="startBtn" class="start-btn">开始抽奖</button>
+                    <button id="stopBtn" class="stop-btn" disabled>停止抽奖</button>
+                </div>
+
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                    <span id="progressText" class="progress-text">0/6 轮完成</span>
+                </div>
+            </div>
+
+            <div class="winners-section">
+                <h2>🏆 中奖名单</h2>
+                <div id="winnersList" class="winners-list">
+                    <!-- 中奖者将在这里显示 -->
+                </div>
+            </div>
+        </main>
+
+        <div class="confetti-container" id="confetti"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
